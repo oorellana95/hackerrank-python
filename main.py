@@ -3,10 +3,20 @@
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
+import pandas as pd
+
 
 def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+    data = {'fields': ['cik', 'name', 'ticker', 'exchange'],
+            'data': [[320193, 'Apple Inc.', 'AAPL', 'Nasdaq'],
+                     [789019, 'MICROSOFT CORP', 'MSFT', 'Nasdaq'],
+                     [1067983, 'BERKSHIRE HATHAWAY INC', 'BRK-B', 'NYSE'],
+                     [731766, 'UNITEDHEALTH GROUP INC', 'UNH', 'NYSE']]}
+
+    df = pd.DataFrame(data=data.get('data'), columns=data.get('fields'))
+    dict = df.to_dict(orient='records')
+
+    print(dict)  # Press ⌘F8 to toggle the breakpoint.
 
 
 # Press the green button in the gutter to run the script.
