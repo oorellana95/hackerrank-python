@@ -1,10 +1,10 @@
 #!/bin/python3
 
-def test(i,j):
-  if i == 0:
-    return j
-  else:
-    return test(i-1,i+j)
+def test(i, j):
+    if i == 0:
+        return j
+    else:
+        return test(i - 1, i + j)
 
 
 def test_1():
@@ -23,8 +23,9 @@ def test_3():
     a.pop()
     print(a)
 
+
 def test_4():
-    print(all([2,4,0,6]))
+    print(all([2, 4, 0, 6]))
 
 
 def test_5():
@@ -37,20 +38,10 @@ def test_5():
     else:
         print("Que")
 
+
 def test_6():
-    print(print(9//2))
+    print(print(9 // 2))
 
 
 if __name__ == '__main__':
-    print(test(1,8))
-
-
-
-
-
-
-
-
-
-
-
+    print(test(1, 8))
