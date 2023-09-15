@@ -11,5 +11,12 @@ def pairs(k, arr):
     print(pairs)
 
 
+def pairs_optimal(k, arr):
+    _arr = np.array(arr)
+    _result_arr = _arr - k
+    pairs = len(np.intersect1d(_arr, _result_arr))
+    print(pairs)
+
+
 if __name__ == '__main__':
-    pairs(1, [1, 2, 3, 4])
+    pairs_optimal(1, [1, 2, 3, 4])
